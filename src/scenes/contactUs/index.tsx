@@ -19,6 +19,9 @@ const ContactUs = ({ setSelectedPage }: Props) => {
 
     const onSubmit = async (e: any) => {
         const isValid = await trigger();
+        if (!isValid) {
+            e.preventDefault();
+        }
     };
 
     return (
